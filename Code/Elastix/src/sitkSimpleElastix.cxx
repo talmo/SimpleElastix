@@ -608,6 +608,7 @@ SimpleElastix
 ::SetInitialTransformParameterFileName( const std::string initialTransformParameterFileName )
 {
   this->m_InitialTransformParameterMapFileName = initialTransformParameterFileName;
+  return *this;
 }
 
 std::string
@@ -622,6 +623,7 @@ SimpleElastix
 ::RemoveInitialTransformParameterFileName( void )
 {
   this->m_InitialTransformParameterMapFileName = "";
+  return *this;
 }
 
 SimpleElastix::Self&
@@ -658,6 +660,7 @@ SimpleElastix
   }
 
   this->m_ParameterMapVector[ index ][ key ] = ParameterValueVectorType( 1, value );
+  return *this;
 }
 
 SimpleElastix::Self&
@@ -670,6 +673,7 @@ SimpleElastix
   }
 
   this->m_ParameterMapVector[ index ][ key ] = value;
+  return *this;
 }
 
 SimpleElastix::Self&
@@ -701,6 +705,7 @@ SimpleElastix
   {
     this->m_ParameterMapVector[ index ][ key ].push_back( value );
   }
+  return *this;
 }
 
 SimpleElastix::ParameterValueVectorType
